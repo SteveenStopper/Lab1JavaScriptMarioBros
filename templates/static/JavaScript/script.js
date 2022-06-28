@@ -38,8 +38,7 @@ const start = () => {
     function floorAnimation3(){
         floor3.classList.add('floor-animation-3');
             }setInterval(floorAnimation3, 3100); 
-     
-            
+          
     audioStart.play();
 }
 
