@@ -1,34 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Super Mario</title>
     <link rel="stylesheet" href="{{url_for('static', filename='CSS/estiloMB.css')}}">
-    
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
 </head>
+
 <body>
-        <div class="game-board">
-            <img src="{{url_for('static', filename='Img/clouds.png')}}" class="clouds-1">
-            <img src="{{url_for('static', filename='Img/clouds.png')}}" class="clouds-2">
-            <img src="{{url_for('static', filename='Img/clouds.png')}}" class="clouds-3">
-            <img src="{{url_for('static', filename='Img/mario-stop.png')}}" class="mario">
-            <img src="{{url_for('static', filename='Img/pipe.png')}}" class="pipe">
-            <img src="{{url_for('static', filename='Img/grass.png')}}" class="grass">
-            
-        
-            <div class="floor">
-                <img src="{{url_for('static', filename='Img/floor.png')}}" class="floor-1">
-                <img src="{{url_for('static', filename='Img/floor.png')}}" class="floor-2">
-                <img src="{{url_for('static', filename='Img/floor.png')}}" class="floor-3">
+    <!--Inicio Navbar-->
+    <nav class="navbar navbar-expand-lg bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" style="color: white;" href="/">AlexSG</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" style="color: white;" href="/">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: white;" href="/Juego">Juego</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success bg-danger" style="color: white;"
+                        type="submit">Buscar</button>
+                </form>
             </div>
         </div>
+    </nav>
+
+    <div class="game-board">
+        <img src="{{url_for('static', filename='Img/clouds.png')}}" class="clouds-1">
+        <img src="{{url_for('static', filename='Img/clouds.png')}}" class="clouds-2">
+        <img src="{{url_for('static', filename='Img/clouds.png')}}" class="clouds-3">
+        <img src="{{url_for('static', filename='Img/mario-stop.png')}}" class="mario">
+        <img src="{{url_for('static', filename='Img/pipe.png')}}" class="pipe">
+        <img src="{{url_for('static', filename='Img/grass.png')}}" class="grass">
 
 
-<p id="text-start">Para jugar, presiona cualquir tecla </p>
-     
+        <div class="floor">
+            <img src="{{url_for('static', filename='Img/floor.png')}}" class="floor-1">
+            <img src="{{url_for('static', filename='Img/floor.png')}}" class="floor-2">
+            <img src="{{url_for('static', filename='Img/floor.png')}}" class="floor-3">
+        </div>
+    </div>
 
-    <script src="{{url_for('static', filename='JavaScript/script.js')}}" defer></script>   
+
+    <p id="text-start">Para jugar, presiona cualquir tecla </p>
+
+    <!--Footers o Pie de pagina-->
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-muted">&copy; 2022 Alex Company, Inc</p>
+
+            <a href="/Inicio"
+                class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <img src="{{url_for('static', filename='Img/Logo.png')}}" width="70px" alt="">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap" />
+                </svg>
+            </a>
+
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="/" class="nav-link px-2 text-muted">Inicio</a></li>
+                <li class="nav-item"><a href="https://github.com/SteveenStopper"
+                        class="nav-link px-2 text-muted">GitHub</a></li>
+                <li class="nav-item"><a href="https://www.facebook.com/gaming/ByAlexSG"
+                        class="nav-link px-2 text-muted">Facebook</a></li>
+                <li class="nav-item"><a href="https://www.instagram.com/alexsg_10/"
+                        class="nav-link px-2 text-muted">Instagram</a></li>
+                <li class="nav-item"><a href="https://www.youtube.com/channel/UCtrGWtrbb4UvTQ-xq3wEd8Q"
+                        class="nav-link px-2 text-muted">YouTube</a></li>
+            </ul>
+        </footer>
+
+        <script src="{{url_for('static', filename='JavaScript/script.js')}}" defer></script>
 </body>
+
 </html>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>

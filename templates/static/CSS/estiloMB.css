@@ -60,7 +60,8 @@ respectivos estilos*/
 
 /*=============== Escenario ===============*/
 /*codificacion del escenario*/
-/*Utilizaremos la clase que creamos en nuestra imagen y le añadiremos sus estilos.*/
+/*Utilizaremos la clase que creamos en nuestra imagen y le añadiremos sus estilos.
+en esta clase de pipe va a tener su posicion, bot para que se ponga,ancho, alto*/
 /*Tubos */
 .pipe {
     position: absolute;
@@ -115,10 +116,10 @@ respectivos estilos*/
 
 /*Piso*/
 .floor {
-        width: 1500px;
-        position: absolute;
-        bottom: 0;
-        padding-bottom: 34px;
+    width: 1500px;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 34px;
        
 }
 .floor-1{
@@ -160,8 +161,6 @@ respectivos estilos*/
 }
 
 
-
-
 .floor-3{
     position: absolute;  
     right: -1500px;
@@ -182,9 +181,10 @@ respectivos estilos*/
 }
 
 
-
-
 /*Nuves*/
+/*Estilo para las clases de nueves numero 1
+ le vamos a definir la posicion, ancho, la separacion de la parte superirior,
+tendremos en el z-index el orden del elemento y la animacion ya creada con su tiempo respectivo.*/
 .clouds-1 {
     position: absolute;
     width: 550px;
@@ -192,6 +192,10 @@ respectivos estilos*/
     z-index: 4;
     animation: clouds-animation-1 40s infinite linear;
 }
+
+/*Estilo para las clases de nueves numero 2
+ le vamos a definir la posicion, ancho, la separacion de la parte superirior,
+tendremos en el z-index el orden del elemento y la animacion ya creada con su tiempo respectivo.*/
 .clouds-2 {
     position: absolute;
     width: 270px;
@@ -199,6 +203,10 @@ respectivos estilos*/
     z-index: 3;
     animation: clouds-animation-2 50s infinite linear;
 }
+
+/*Estilo para las clases de nueves numero 3
+ le vamos a definir la posicion, ancho, la separacion de la parte superirior,
+tendremos en el z-index el orden del elemento y la animacion ya creada con su tiempo respectivo.*/
 .clouds-3 {
     position: absolute;
     width: 150px;
@@ -207,35 +215,43 @@ respectivos estilos*/
     animation: clouds-animation-3 75s infinite linear;
 }
 
-
+/*Animacion para las nueves numero 1*/
 @keyframes clouds-animation-1 {
+    /*Aqui definimos desde donde a empezar la animacion*/
     from{
         right: -550px;
     }
+    /*Aqui definimos donde terminara la animacion*/
     to{
         right: 100%;
     }
 }
 
+/*Animacion para las nueves numero 2*/
 @keyframes clouds-animation-2 {
+    /*Aqui definimos desde donde a empezar la animacion*/
     from{
         right: -1300px;
     }
+    /*Aqui definimos donde terminara la animacion*/
     to{
         right: 100%;
     }
 }
 
+/*Animacion para las nueves numero 3*/
 @keyframes clouds-animation-3 {
+    /*Aqui definimos desde donde a empezar la animacion*/
     from{
         right: -250px;
     }
+    /*Aqui definimos donde terminara la animacion*/
     to{
         right: 100%;
     }
 }
 
-/*Estilo de letra para la etiqueta P*/
+/*Estilo de letra para la etiqueta para la etiqueta P*/
 p {
     font-family:'Roboto Mono', monospace;
     padding: 50px;

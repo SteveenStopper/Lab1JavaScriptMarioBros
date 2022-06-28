@@ -1,12 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
+
 <body>
-    
+  <!--Inicio Navbar-->
+  <nav class="navbar navbar-expand-lg bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" style="color: white;" href="/">AlexSG</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" style="color: white;" href="/">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: white;" href="/Juego">Juego</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success bg-danger" style="color: white;" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!--Inicio de textos-->
+  <p
+    style="background:black; color:white; font-weight:bold; padding:15px; border:3px solid white; margin-top:20px; margin-bottom:40px; text-align:center; font-size:22px; border-radius:10px;">
+    Super Mario Bros Jumping</p>
+  <p class="container" style="padding: 0%;">
+    Mario Bros. es un videojuego de arcade desarrollado por Nintendo en el año 1983. Fue creado por Shigeru Miyamoto. Ha
+    sido presentado como un minijuego en la serie de Super Mario Advance y otros juegos.
+  </p>
+  <p class="container" style="padding: 0%;">
+    En este juego tratamos de tomar esa escencia del juego y transformarla en un simple juego de saltos realizado con
+    JavaScript,
+    al igual que sus estilos fueron implemnetados con CSS y visualizarlos con Html en nuestra pagina.
+  </p>
+  <!--Inicio Carrusel-->
+  <div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="padding: 2%;">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{{url_for('static', filename='Img/Iniciojuego.jpg')}}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{{url_for('static', filename='Img/JuegoCorriendo.jpg')}}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{{url_for('static', filename='Img/Perdida.jpg')}}" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </div>
 </body>
+
+<!-- Texto de instrucciones -->
+<p
+  style="background:black; color:white; font-weight:bold; padding:15px; border:3px solid white; margin-top:10px; margin-bottom:40px; text-align:center; font-size:22px; border-radius:10px;">
+  Instrucciones</p>
+<div class="container" style="padding: 0%;">
+  <ul>
+    <li>Primero debemos ingresar a la pagina principal</li>
+    <li>Una vez estemos en dicha pagina daremos a la opcion Juego que se encuentra en la barra de navegación.</li>
+    <li>A DISFRUTAR DEL JUEGO !!!!!</li>
+  </ul>
+</div>
+
+<!--Footers o Pie de pagina-->
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <p class="col-md-4 mb-0 text-muted">&copy; 2022 Alex Company, Inc</p>
+
+    <a href="/Inicio"
+      class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <img src="{{url_for('static', filename='Img/Logo.png')}}" width="70px" alt="">
+      <svg class="bi me-2" width="40" height="32">
+        <use xlink:href="#bootstrap" />
+      </svg>
+    </a>
+
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item"><a href="/" class="nav-link px-2 text-muted">Inicio</a></li>
+      <li class="nav-item"><a href="https://github.com/SteveenStopper" class="nav-link px-2 text-muted">GitHub</a></li>
+      <li class="nav-item"><a href="https://www.facebook.com/gaming/ByAlexSG" class="nav-link px-2 text-muted">Facebook</a></li>
+      <li class="nav-item"><a href="https://www.instagram.com/alexsg_10/" class="nav-link px-2 text-muted">Instagram</a></li>
+      <li class="nav-item"><a href="https://www.youtube.com/channel/UCtrGWtrbb4UvTQ-xq3wEd8Q" class="nav-link px-2 text-muted">YouTube</a></li>
+    </ul>
+  </footer>
+</div>
+</body>
+
 </html>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>

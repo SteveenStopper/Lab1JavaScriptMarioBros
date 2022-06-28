@@ -1,5 +1,7 @@
+# Importa las librerias de flask
 from flask import Flask, render_template
-import os
+# Nos permite acceder a funcionalidades dependientes del Sistema Operativo.
+import os 
 
 
 # Inicializar la aplicacion
