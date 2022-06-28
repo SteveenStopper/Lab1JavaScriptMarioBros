@@ -1,0 +1,244 @@
+/*Tendremos un selector universal por lo que estamos configurando todos los elementos 
+para que tengan cero márgenes, cero padding y el tamaño de la caja o cuadro, esto para
+que se vean igual en todos los navegadores.*/
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;    
+}
+
+body{
+    background-color: rgb(236, 236, 236);
+}
+
+/*Ahora tendremos la clase que definimos en nuestro html y le pondremos sus
+respectivos estilos*/
+.game-board {
+    
+    width: 100%;
+    height: 500px;
+    border-top: 800px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEE8, #E0F6FF);
+}
+
+
+/*=============== Mario ===============*/
+/*Utilizaremos la clase que creamos en nuestra imagen y le añadiremos sus estilos.*/
+.mario {
+    width: 60px;
+    position: absolute;
+    bottom: 0;
+    margin-left: 100px;
+    padding-bottom: 34px;
+    z-index: 10;
+}
+
+/*Crearemos una clase jump y colocaremos la animacion*/
+.jump{
+    animation: mario-jump-animation 1500ms ease-out;
+}
+
+@keyframes mario-jump-animation {
+    0%{
+        bottom: 0px;
+    }
+    45%{
+        bottom: 180px
+    }
+    55%{
+        bottom: 180px;
+    }
+    100%{
+        bottom:0px;
+    }
+    
+}
+
+
+/*=============== Escenario ===============*/
+/*codificacion del escenario*/
+/*Utilizaremos la clase que creamos en nuestra imagen y le añadiremos sus estilos.*/
+/*Tubos */
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    right: -80px;
+    padding-bottom: 34px;
+    z-index: 10;
+}
+
+/*En esta parte llamamos a la animacion, le colocamos el tiempo que durara y que sea infinito*/
+.pipe-animation{
+    animation: grass-animation 3s infinite linear;
+}
+
+/*Vamos a crear la animacion del tubo para ello debemos definirla primeramente.*/
+@keyframes pipe-animation {
+    /*Aqui definimos desde donde a empezar la animacion*/
+    from{
+        right: -80px;
+    }
+    /*Aqui definimos donde terminara la animacion*/
+    to{
+        right: 100%;
+    }
+    
+}
+
+/*Grama */
+.grass {
+    position: absolute;
+    bottom: 0;
+    width: 160px;
+    right: -160px;
+    padding-bottom: 34px;
+}
+
+.grass-animation{
+    animation: grass-animation 3s infinite linear;
+}
+
+@keyframes grass-animation {
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+    
+}
+
+
+/*Piso*/
+.floor {
+        width: 1500px;
+        position: absolute;
+        bottom: 0;
+        padding-bottom: 34px;
+       
+}
+.floor-1{
+    position: absolute;  
+    z-index: 0;
+}
+
+.floor-animation-1{
+    animation: floor-animation-1 3.1s infinite linear;
+}
+
+@keyframes floor-animation-1 {
+    0%{
+        right:0px;
+    }
+    100%{
+        right: 100%;    
+    }
+}
+
+
+.floor-2{
+    position: absolute; 
+    right: -1500px;
+    z-index: 10;
+}
+
+.floor-animation-2{
+    animation: floor-animation-2 6.2s infinite linear;
+}
+
+@keyframes floor-animation-2 {
+    0%{
+        right:-1500px;
+    }
+    100%{
+        right: 100%;    
+    }
+}
+
+
+
+
+.floor-3{
+    position: absolute;  
+    right: -1500px;
+    z-index: 10;
+}
+
+.floor-animation-3{
+    animation: floor-animation-3 6.2s infinite linear;
+}
+
+@keyframes floor-animation-3 {
+    0%{
+        right:-1500px;
+    }
+    100%{
+        right: 100%;    
+    }
+}
+
+
+
+
+/*Nuves*/
+.clouds-1 {
+    position: absolute;
+    width: 550px;
+    padding-top: 50px;
+    z-index: 4;
+    animation: clouds-animation-1 40s infinite linear;
+}
+.clouds-2 {
+    position: absolute;
+    width: 270px;
+    padding-top: 150px;
+    z-index: 3;
+    animation: clouds-animation-2 50s infinite linear;
+}
+.clouds-3 {
+    position: absolute;
+    width: 150px;
+    padding-top: 300px;
+    z-index: 2;
+    animation: clouds-animation-3 75s infinite linear;
+}
+
+
+@keyframes clouds-animation-1 {
+    from{
+        right: -550px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes clouds-animation-2 {
+    from{
+        right: -1300px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes clouds-animation-3 {
+    from{
+        right: -250px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+
+p {
+    font-family:'Roboto Mono', monospace;
+    padding: 50px;
+    text-align: center;
+    color: black;
+}
