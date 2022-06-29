@@ -13,6 +13,8 @@
 
 <body>
   <!--Inicio Navbar-->
+  <!--En esta seccion del codigo tendremos el navbar personalizado con un color primario de azul
+    las letras tendran su propio color y se encontrar enlazadas con el archivo de python.-->
   <nav class="navbar navbar-expand-lg bg-primary">
     <div class="container-fluid">
       <a class="navbar-brand" style="color: white;" href="/">AlexSG</a>
@@ -38,6 +40,9 @@
   </nav>
 
   <!--Inicio de textos-->
+  <!-- Para la parte del texto donde tendremos el titulo, y una pequeña descripcion del juego.
+    En el titulo tendremos un fondo negro con unas letras de color blanco. 
+    Dentro de dos contenedores tendremos divido el texto explicativo relacionado con el tema. -->
   <p
     style="background:black; color:white; font-weight:bold; padding:15px; border:3px solid white; margin-top:20px; margin-bottom:40px; text-align:center; font-size:22px; border-radius:10px;">
     Super Mario Bros Jumping</p>
@@ -50,7 +55,11 @@
     JavaScript,
     al igual que sus estilos fueron implemnetados con CSS y visualizarlos con Html en nuestra pagina.
   </p>
+
   <!--Inicio Carrusel-->
+  <!-- Para tener una previsualizacion de lo que va hacer el juego tendremos un carrucel con imagenes, las 
+    cuales seran llamadas de manera estatica, las imagenes se pueden pasar de forma automatica o el usuario
+    las podra pasar.  -->
   <div>
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="padding: 2%;">
       <div class="carousel-indicators">
@@ -87,6 +96,8 @@
 </body>
 
 <!-- Texto de instrucciones -->
+<!-- Al igual que el titulo tendremos una barra de color con lestras blancas, esta para el apartado de las instrucciones.
+  Para ello enlistaremos las intrucciones de lo que debe hacer el usuario, para poder ingresar al juego. -->
 <p
   style="background:black; color:white; font-weight:bold; padding:15px; border:3px solid white; margin-top:10px; margin-bottom:40px; text-align:center; font-size:22px; border-radius:10px;">
   Instrucciones</p>
@@ -99,6 +110,8 @@
 </div>
 
 <!--Footers o Pie de pagina-->
+<!-- Tendremos el pie de pagina el cual estara vinculada con la pagina de inicio, tambien 
+  tendremos los enlaces de las redes sociales del desarrollador-->
 <div class="container">
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     <p class="col-md-4 mb-0 text-muted">&copy; 2022 Alex Company, Inc</p>
@@ -107,7 +120,7 @@
       class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
       <img src="{{url_for('static', filename='Img/Logo.png')}}" width="70px" alt="">
       <svg class="bi me-2" width="40" height="32">
-        <use xlink:href="#bootstrap" />
+        <use xlink:href="#bootstrap"/>
       </svg>
     </a>
 

@@ -15,6 +15,9 @@
 
 <body>
     <!--Inicio Navbar-->
+    <!-- Para tener una previsualizacion de lo que va hacer el juego tendremos un carrucel con imagenes, las 
+    cuales seran llamadas de manera estatica, las imagenes se pueden pasar de forma automatica o el usuario
+    las podra pasar.  -->
     <nav class="navbar navbar-expand-lg bg-primary">
         <div class="container-fluid">
             <a class="navbar-brand" style="color: white;" href="/">AlexSG</a>
@@ -41,6 +44,8 @@
         </div>
     </nav>
 
+    <!-- En esta seccion del codigo vamos a tener las imagenes llamdas de forma estatica.
+         Cada una de estas tendra una clase la cual sera utilizada en el archivo de CSS. -->
     <div class="game-board">
         <img src="{{url_for('static', filename='Img/clouds.png')}}" class="clouds-1">
         <img src="{{url_for('static', filename='Img/clouds.png')}}" class="clouds-2">
@@ -57,10 +62,13 @@
         </div>
     </div>
 
-
+    <!-- Esta etiqueta nos aparecera en la parte inferior del juego, estara centrada para que el usuario
+        pueda visualizar y jugar. -->
     <p id="text-start">Para jugar, presiona cualquir tecla </p>
 
     <!--Footers o Pie de pagina-->
+    <!-- Tendremos el pie de pagina el cual estara vinculada con la pagina de inicio, tambien 
+  tendremos los enlaces de las redes sociales del desarrollador-->
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
             <p class="col-md-4 mb-0 text-muted">&copy; 2022 Alex Company, Inc</p>
